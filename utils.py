@@ -1,6 +1,7 @@
 def load_swc(path):
     swc = {
         'n': [],
+        'type': [],
         'x': [],
         'y': [],
         'z': [],
@@ -12,6 +13,7 @@ def load_swc(path):
                 continue
             line = line.rstrip().split(' ')
             swc['n'].append(int(line[0]))
+            swc['type'].append(int(line[1]))
             swc['x'].append(float(line[2]))
             swc['y'].append(float(line[3]))
             swc['z'].append(float(line[4]))
